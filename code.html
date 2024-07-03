@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>add2homescreen Snippets</title>
+
+
+
+
+<!-- Place the code below, START to END into the HEAD of your website.
+ Upload the add2homescreen folder which contains the scripts,
+ config, and images into the root folder of your website -->
+
+<!-- START add2homescreen Code -->
+
+    <!-- Web App Meta Data-->
+    <link rel="manifest" id="add2homescreenManifest">
+    <script src="config.js"></script>
+    <!-- Hide App Notice (Default) Styling -->
+    <style id="ifIOS">
+        #ioswarning {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+    <style id="ifAndroid">
+        #androidwarning {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+    <!-- Always Hide in Landscape Mode Styling -->
+    <style>
+        @media only screen and (orientation:landscape) {
+            #ioswarning {
+                visibility: hidden;
+                display: none;
+            }
+
+            #androidwarning {
+                visibility: hidden;
+                display: none;
+            }
+        }
+    </style>
+    <!-- iOS App Notice -->
+    <div id="ioswarning" onClick="setCookie('dismissapp','true',30); this.style.visibility='hidden';"
+        style="height: auto; width: 100%; bottom:0; position:fixed; z-index: 9999; text-align: center"><img
+            src="/add2homescreen/ios-notice.svg" style="width: 90%; margin: 0 auto; padding-bottom: 5px"
+            alt="To add our app, please tap the share icon and then 'Add to Homescreen'."></div>
+    <!-- Android App Notice -->
+    <div id="androidwarning" onClick="setCookie('dismissapp','true',30); this.style.visibility='hidden';"
+        style="height: auto; width: 100%; top:0; position:fixed; z-index: 9999; text-align: center"><img
+            src="/add2homescreen/android-notice.svg" style="width: 90%; margin: 0 auto; padding-bottom: 5px"
+            alt="To add our app, tap the menu icon followed by 'Add to Homescreen'."></div>
+
+
+    <script src="/add2homescreen/add2homescreen.js"></script>
+
+<!-- END add2homescreen Code -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+</body>
+
+</html>
